@@ -13,26 +13,10 @@ framework:
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:
-        engines: ['twig']
-        #assets_version: 201204261
-        assets_base_urls:
-            http: [%cdn_url%]
-            ssl: [%cdn_url_ssl%]
     default_locale:  "%locale%"
     trusted_proxies: ~
     session:         ~
     test: ~
-
-monolog:
-    handlers:
-        main:
-            type:   stream
-            path:   "%kernel.logs_dir%/%kernel.environment%.log"
-            level:  notice
-        console:
-            type:   console
-            bubble: false
 
 services:
     project.cookie_foo:

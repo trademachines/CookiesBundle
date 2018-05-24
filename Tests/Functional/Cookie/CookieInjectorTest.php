@@ -42,7 +42,7 @@ class CookieInjectorTest extends WebTestCase
         $cookie = $cookies[0];
         $this->assertJsonStringEqualsJsonString('["bar"]', $cookie->getValue());
         $this->assertSame(false, $cookie->isHttpOnly());
-        $this->assertSame(2000000000, $cookie->getExpiresTime());
+        $this->assertSame('2000000000', $cookie->getExpiresTime());
     }
 
     /**
