@@ -4,7 +4,6 @@ php:
   - 7.0
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
-after_script:
 cache:
   directories:
     - vendor/
